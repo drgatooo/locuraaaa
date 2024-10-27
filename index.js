@@ -17,6 +17,8 @@ app.get('/ping', (_, res) => {
 });
 
 app.get('/', (req, res) => {
+  console.log(req.headers['user-agent']);
+
   if (req.headers && req.headers['user-agent'] && !req.headers['user-agent'].includes('curl')) {
     res.writeHead(302, { Location: 'https://youtu.be/dQw4w9WgXcQ?si=VaRPy5vwdZqo5HQd&t=18' });
     res.end();
