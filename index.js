@@ -11,6 +11,11 @@ const frames = loadFrames(path.join(__dirname, 'frames'));
 
 const app = express();
 
+// to keep app alive
+app.get('/ping', (_, res) => {
+  res.json({ pong: true });
+});
+
 app.get('/', (req, res) => {
   if (req.headers && req.headers['user-agent'] && !req.headers['user-agent'].includes('curl')) {
     res.writeHead(302, { Location: 'https://youtu.be/dQw4w9WgXcQ?si=VaRPy5vwdZqo5HQd&t=18' });
