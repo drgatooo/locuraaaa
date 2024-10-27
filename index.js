@@ -11,7 +11,13 @@ const frames = loadFrames(path.join(__dirname, 'frames'));
 
 const app = express();
 
-app.get('/', (_, res) => {
+app.get('/', (req, res) => {
+  if (req.headers && req.headers['user-agent'] && !req.headers['user-agent'].includes('curl')) {
+    res.writeHead(302, { Location: 'https://youtu.be/dQw4w9WgXcQ?si=VaRPy5vwdZqo5HQd&t=18' });
+    res.end();
+    return;
+  }
+
   let frameIndex = 0;
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   sendFrame(res, frameIndex);
