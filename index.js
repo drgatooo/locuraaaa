@@ -16,11 +16,15 @@ app.get('/ping', (_, res) => {
   res.json({ pong: true });
 });
 
+app.get('/papu', (_, res) => {
+  res.send('<h1>:v</h1>');
+});
+
 app.get('/', (req, res) => {
   console.log(req.headers['user-agent']);
 
   if (req.headers && req.headers['user-agent'] && !req.headers['user-agent'].includes('curl')) {
-    res.writeHead(302, { Location: 'https://github.com/drgatooo/locuraaaa' });
+    res.writeHead(302, { Location: '/papu' });
     res.end();
     return;
   }
@@ -36,7 +40,9 @@ app.get('/', (req, res) => {
  * @param {number} frameIndex
  */
 function sendFrame(res, frameIndex) {
+  // clean the terminal
   res.write('\x1b[2J\x1b[3J\x1b[H');
+
   const frame = applyColors(frames[frameIndex]);
   res.write(frame.replace('// withtext', '') + '\n');
   frameIndex = frameIndex + 1;
@@ -49,7 +55,6 @@ function sendFrame(res, frameIndex) {
 
   setTimeout(
     () => {
-      // clean the terminal
       sendFrame(res, frameIndex);
     },
     frame.startsWith('// withtext') ? 3000 : 1000
