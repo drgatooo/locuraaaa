@@ -57,7 +57,7 @@ function sendFrame(res, frameIndex) {
     () => {
       sendFrame(res, frameIndex);
     },
-    frame.startsWith('// withtext') ? 3000 : 1000
+    frame.startsWith('// withtext') ? 3000 : 1500
   );
 }
 
