@@ -9,3 +9,5 @@
  <{magenta}-o{/magenta}w{magenta}o-{/magenta}>  <{gray}-o{/gray}w{gray}o-{/gray}>          {green}.{/green}{random}o{/random}{green}.'.{/green}{random}o{/random}{green}.'.{/green}{random}o{/random}{green}.'.{/green}
   <{red}---{/red}>    <{gray}---{/gray}>              [_____]
 ___u-u______u-u________________\___/_____
+
+{gray}try curl -L papu.fwrd.lol/list ???{/gray}

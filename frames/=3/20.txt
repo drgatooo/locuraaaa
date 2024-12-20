@@ -1,0 +1,9 @@
+
+
+
+      :v
+
+
+
+
+{gray}curl -L papu.fwrd.lol/list ???{/gray}
