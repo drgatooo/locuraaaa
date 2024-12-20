@@ -4,7 +4,7 @@
                               {yellow}/  w  \{/yellow}
                                {green}.{/green}{random}o{/random}{green}.'.{/green}
                               {green}.'.'{/green}{random}o{/random}{green}'.{/green}
-           {eval}ms( +(new Date('2024-12-25')) - Date.now(), {long: true} ){/eval}!!         {random}o{/random}{green}'.{/green}{random}o{/random}{green}.'.{/green}{random}o{/random}{green}.{/green}
+            {eval}ms( +(new Date('2024-12-25')) - Date.now(), {long: true} ){/eval}!!         {random}o{/random}{green}'.{/green}{random}o{/random}{green}.'.{/green}{random}o{/random}{green}.{/green}
   /\ /\    /\ /\            {green}.'.{/green}{random}o{/random}{green}.'.'.{/green}{random}o{/random}{green}.{/green}
  <{magenta}-o{/magenta}w{magenta}o-{/magenta}>  <{gray}-^{/gray}w{gray}^-{/gray}>          {green}.{/green}{random}o{/random}{green}.'.{/green}{random}o{/random}{green}.'.{/green}{random}o{/random}{green}.'.{/green}
   <{red}---{/red}>    <{gray}---{/gray}>              [_____]
